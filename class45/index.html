@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Download Effect</title>
+  <style>
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+      font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+    }
+
+    body {
+      min-height: 100vh;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      background: #0f172a;
+    }
+
+    .download-card {
+      width: 540px;
+      background: #020617;
+      border-radius: 18px;
+      padding: 20px 22px;
+      box-shadow: 0 18px 30px rgba(15, 23, 42, 0.8);
+      border: 1px solid rgba(148, 163, 184, 0.2);
+    }
+
+    .download-title {
+      font-size: 18px;
+      font-weight: 600;
+      color: #e5e7eb;
+      margin-bottom: 4px;
+    }
+
+    .download-subtitle {
+      font-size: 13px;
+      color: #9ca3af;
+      margin-bottom: 14px;
+    }
+
+    .progress-wrapper {
+      margin-bottom: 16px;
+    }
+
+    .progress-top-row {
+      display: flex;
+      justify-content: space-between;
+      margin-bottom: 6px;
+      font-size: 12px;
+      color: #9ca3af;
+    }
+
+    .progress-top-row span.progress-status {
+      color: #22c55e;
+      font-weight: 500;
+    }
+
+    .progress-bar {
+      position: relative;
+      width: 100%;
+      height: 10px;
+      background: #020617;
+      border-radius: 999px;
+      overflow: hidden;
+      border: 1px solid rgba(148, 163, 184, 0.45);
+    }
+
+    .progress-fill {
+      position: absolute;
+      top: 0;
+      left: 0;
+      height: 100%;
+      width: 0;
+      border-radius: 999px;
+      background: linear-gradient(90deg, #22c55e, #4ade80);
+      box-shadow: 0 0 12px rgba(34, 197, 94, 0.8);
+      transition: width 0.12s linear;
+    }
+
+    .progress-percentage {
+      text-align: right;
+      margin-top: 4px;
+      font-size: 12px;
+      color: #e5e7eb;
+      font-variant-numeric: tabular-nums;
+    }
+
+    .download-footer {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      margin-top: 6px;
+    }
+
+    .download-size {
+      font-size: 12px;
+      color: #9ca3af;
+    }
+
+    .download-btn {
+      border: none;
+      outline: none;
+      padding: 8px 16px;
+      border-radius: 999px;
+      font-size: 13px;
+      font-weight: 500;
+      cursor: pointer;
+      background: #22c55e;
+      color: #022c22;
+      box-shadow: 0 10px 18px rgba(34, 197, 94, 0.35);
+      transition: transform 0.08s ease, box-shadow 0.08s ease, opacity 0.2s ease;
+    }
+
+    .download-btn:active {
+      transform: translateY(1px) scale(0.98);
+      box-shadow: 0 4px 10px rgba(34, 197, 94, 0.3);
+    }
+
+    .download-btn.disabled {
+      opacity: 0.6;
+      cursor: not-allowed;
+      box-shadow: none;
+    }
+  </style>
+</head>
+<body>
+
+  <!-- MAIN DIV -->
+  <div class="download-card">
+    <!-- TEXT UP SIDE -->
+    <div class="download-title">File Download</div>
+    <div class="download-subtitle" id="downloadText">
+      Ready to download your file.
+    </div>
+
+    <!-- PROGRESS BAR SECTION -->
+    <div class="progress-wrapper">
+      <div class="progress-top-row">
+        <span>Downloading...</span>
+        <span class="progress-status" id="statusText">Idle</span>
+      </div>
+
+      <div class="progress-bar">
+        <div class="progress-fill" id="progressFill"></div>
+      </div>
+
+      <div class="progress-percentage" id="progressPercent">0%</div>
+    </div>
+
+    <!-- BOTTOM ROW: SIZE + BUTTON -->
+    <div class="download-footer">
+     <!-- BUTTON -->
+      <button class="download-btn" id="downloadBtn">
+        Start Download
+      </button>
+    </div>
+  </div>
+</body>
+<script src="indeex.js"></script>
+</html>

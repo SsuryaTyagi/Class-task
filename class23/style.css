@@ -1,0 +1,166 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html,
+body {
+  height: 100%;
+  width: 100%;
+}
+
+main {
+  padding: 1rem;
+  color: rgb(211, 211, 211);
+  background-color: black;
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+main .View1 {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+main .View1 .top {
+  border-radius: 10px;
+}
+main .View1 .top img {
+  width: 100%;
+  height: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+  -o-object-position: center;
+     object-position: center;
+  border-radius: 10px;
+}
+main .View1 .bottom {
+  background-color: #1e1e1e;
+  width: 100%;
+  padding: 2rem;
+  border-radius: 10px;
+  font-family: sans-serif;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 20vw;
+}
+main .View1 .bottom p {
+  font-size: 1rem;
+}
+main .View1 .bottom div {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+main .View1 .bottom div h1 {
+  font-weight: 100;
+  font-size: clamp(2.8rem, 4vw, 4.8rem);
+}
+main .View1 .bottom div p {
+  line-height: 2;
+  opacity: 70%;
+  font-size: clamp(1rem, 1.5vw, 2rem);
+  font-weight: 200;
+}
+main .View1 .bottom div button {
+  padding: 0.5em 1.2em;
+  border-radius: 20px;
+  background: #333;
+  color: white;
+  border: none;
+  cursor: pointer;
+  transition: background 0.3s ease;
+}
+main .View1 .bottom div button:hover {
+  background: #555;
+}
+main section.View2 {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+main section.View2 .top,
+main section.View2 .bottom {
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+}
+main section.View2 .s1 {
+  font-size: 3.5rem;
+  font-family: sans-serif;
+  display: flex;
+  flex-direction: column;
+  gap: 0.3rem;
+  align-items: center;
+}
+main section.View2 .s1 h4 {
+  font-size: 0.8rem;
+  opacity: 50%;
+}
+main section.View3 {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  font-family: sans-serif;
+}
+main section.View3 .top img {
+  width: 100%;
+  height: 100%;
+  -o-object-position: center;
+     object-position: center;
+  border-radius: 10px;
+}
+main section.View3 .bottom {
+  background-color: #1e1e1e;
+  border-radius: 10px;
+  padding: 1rem;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: 15vw;
+  justify-content: center;
+}
+main section.View3 .bottom p {
+  font-size: 1rem;
+}
+main section.View3 .bottom div p {
+  line-height: 2;
+  opacity: 70%;
+  font-size: clamp(1rem, 1vw, 2rem);
+  font-weight: 200;
+}
+main section.View3 .bottom div h1 {
+  font-weight: 100;
+  font-size: clamp(2.8rem, 3.5vw, 4.8rem);
+}
+
+@media (min-width: 1000px) {
+  main .View1 {
+    display: flex;
+    flex-direction: row;
+    gap: 1rem;
+  }
+  main .View1 .top,
+  main .View1 .bottom {
+    flex: 1;
+  }
+  main section.View2 {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+  }
+  main section.View3 {
+    display: flex;
+    flex-direction: row-reverse;
+    gap: 1rem;
+  }
+  main section.View4 {
+    display: flex;
+    flex-direction: row;
+    gap: 1rem;
+  }
+}/*# sourceMappingURL=style.css.map */
