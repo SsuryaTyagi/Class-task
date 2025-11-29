@@ -24,18 +24,20 @@ let sound = [
             piano_div += `<div class="piano">${val}</div>`        
     });
 
-console.log(sound);
+// console.log(piano_div);
 
     let main = document.querySelector("#main");
     main.innerHTML = piano_div;
-    let piano = document.querySelectorAll(".piano");    
-    piano.forEach((val,key)=>{
+    let piano = document.querySelectorAll(".piano");   
+    console.log(piano);
      
-      let help = val.addEventListener("click", ()=>{
+    piano.forEach((val,key)=>{
+       val.addEventListener("click", ()=>{
                  new Audio(sound[key]).play()        
         })
     })
     document.addEventListener("keydown", (e)=>{
+        // console.log(e); 
        let  preeskeys = e.key.toUpperCase();
        let index = keys.indexOf(preeskeys);
 
