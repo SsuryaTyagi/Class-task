@@ -132,3 +132,45 @@
 // console.log(p1());
 
 
+// function afterDelay(time,callback){
+
+//     setTimeout(()=>{
+//         callback("callback executed")
+//     },time)
+// };
+
+// afterDelay(2000,function(data){
+//     console.log(data);
+    
+// })
+
+// function getUser(UserName,callback){
+
+//     setTimeout(()=>{
+//         callback({id:1,UserName:UserName},
+//          function(){
+//             console.log("post 1");
+//         })
+//     },1000)
+
+// }
+
+
+// getUser("surya",function(obj,getUserPost){
+//         console.log(obj.UserName);
+//         getUserPost();
+// })
+
+function loginUser(cb){
+    setTimeout(()=>{
+        cb({name:"surya",pass:"surya123",userId:1});
+    },1000)
+}
+
+loginUser(function(data){
+       function fetchPermission(cd){
+            setTimeout(() => {
+                console.log("loadDasboard"); 
+            }, 1000);
+        }
+})
